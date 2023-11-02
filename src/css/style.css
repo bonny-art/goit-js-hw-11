@@ -54,7 +54,18 @@ body {
 }
 
 .search-form {
+  position: fixed;
+  top: 0;
+  z-index: 999;
   display: flex;
+  width: calc(100% - 40px);
+  min-width: 500px;
+  background-color: hsl(0, 0%, 81%);
+  padding: 20px;
+}
+
+.search-form input {
+  flex-grow: 1;
 }
 
 input {
@@ -65,7 +76,7 @@ input {
 }
 
 button {
-  width: 200px;
+  width: 150px;
   height: 50px;
   background-color: #333;
   font-size: 20px;
@@ -96,15 +107,6 @@ button:hover {
   display: none;
 }
 
-.search-form {
-  width: 1660px;
-  min-width: 500px;
-}
-
-.search-form input {
-  flex-grow: 1;
-}
-
 .gallery {
   min-width: 500px;
 
@@ -114,6 +116,7 @@ button:hover {
 
   list-style: none;
   padding: 0;
+  padding-top: 70px;
   margin: 0;
 }
 
@@ -159,4 +162,16 @@ button:hover {
   font-size: 0.9em;
   line-height: 1.1;
   text-align: center;
+}
+
+.to-top-button {
+  width: 100px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.to-top-button:hover {
+  background-color: #0056b3;
 }
